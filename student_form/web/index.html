@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+ 25=> Write a program that registers a student by providing rollno, name, course, semester, hobbies 
+and after submitting the form display the information on a page using POST method. 
+-->
+<html>
+    <head>
+        <title>Student Registration</title>
+  <style>
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #444;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .checkbox-group {
+      margin-bottom: 15px;
+    }
+
+    .checkbox-group label {
+      font-weight: normal;
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    input[type="submit"] {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="form-container">
+    <h2>Student Registration</h2>
+    <form action="form_post" method="post">
+      <label for="rollno">Roll Number</label>
+      <input type="text" id="rollno" name="rollno" required>
+
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="course">Course</label>
+      <input type="text" id="course" name="course" required>
+
+      <label for="semester">Semester</label>
+      <select id="semester" name="semester" required>
+        <option value="">--Select Semester--</option>
+        <option value="1st">1st</option>
+        <option value="2nd">2nd</option>
+        <option value="3rd">3rd</option>
+        <option value="4th">4th</option>
+        <option value="5th">5th</option>
+        <option value="6th">6th</option>
+        <option value="7th">7th</option>
+        <option value="8th">8th</option>
+      </select>
+
+      <label>Hobbies</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="hobbies" value="Reading"> Reading</label>
+        <label><input type="checkbox" name="hobbies" value="Music"> Music</label>
+        <label><input type="checkbox" name="hobbies" value="Sports"> Sports</label>
+        <label><input type="checkbox" name="hobbies" value="Traveling"> Traveling</label>
+      </div>
+
+      <input type="submit" value="Register">
+    </form>
+  </div>
+    </body>
+</html>
